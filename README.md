@@ -11,9 +11,11 @@ perl decomposition_code_local.pl input_file -clean > output_file
 ```
 
 Note - the *-clean* flag is optional - it removes outliers based on their residual files and recompute constraints. As a toy example file *test_data_decomposition.txt* contains data for 20 ATGCs. The following command will decompose their dN/dS values into components:
+
 '''
 perl decomposition_code_local.pl test_data_decomposition.txt -clean > test_data_output.out
 '''
+
 As the optimization is fully determenistic, the script should produce exactly the same results as in *test_data_output.out* in every run.
 The relevant data is deposited at Zenodo: https://zenodo.org/records/17575555
 
