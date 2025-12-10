@@ -18,6 +18,6 @@ Note - the *-clean* flag is optional - it removes outliers based on their residu
 perl decomposition_code_local.pl test_data_decomposition.txt -clean > test_data_output.out
 ```
 
-As the optimization is fully determenistic, the script should produce exactly the same results as in *test_data_output.out* regardless of your PC configurations. Hence all results that are deposited https://zenodo.org/records/17575555 can be reproduced by this script.
+As the optimization is fully determenistic, the script should produce exactly the same results as in *test_data_output.out* regardless of your PC configurations. Hence all dN/dS decomposition results that are deposited https://zenodo.org/records/17575555 can be reproduced by this script.
 
 For any technical questions, please contact: roman.kogay@nih.gov or wolf@ncbi.nlm.nih.gov
