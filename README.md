@@ -21,3 +21,19 @@ perl decomposition_code_local.pl test_data_decomposition.txt -clean > test_data_
 As the optimization is fully determenistic, the script should produce exactly the same results as in *test_data_output.out* regardless of your PC configurations. Hence all dN/dS decomposition results that are deposited https://zenodo.org/records/17575555 can be reproduced by this script.
 
 For any technical questions, please contact: roman.kogay@nih.gov or wolf@ncbi.nlm.nih.gov
+
+## Pseudocode:
+
+```
+Load data
+Identify unique rows and columns
+Initialize both row_vector and column_vector to zeros
+Repeat until convergence or max iterations:
+    For each row: update its value = mean(value - column_vector for its columns)
+    For each column: update its value = mean(value - row_vector for its rows)
+    Optionally shift vectors so their overall mean is zero
+    Measure change since the last iteration
+end repeat
+Compute residuals = value - (row_vector + column_vector)
+Output row_vector, column_vector, and residuals
+```
