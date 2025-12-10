@@ -12,7 +12,7 @@ The input should be a tab-separated file, where first column corresponds to the 
 perl decomposition_code_local.pl input_file -clean > output_file
 ```
 
-Note - the *-clean* flag is optional - it removes outliers based on their residual files and recompute constraints. As a toy example file *test_data_decomposition.txt* contains data for 20 ATGCs. The following command will decompose their dN/dS values into components:
+Note - the *-clean* flag is optional - it removes outliers based on their residual files and recompute constraints. As a toy example, file *test_data_decomposition.txt* contains data for 20 ATGCs. The following command will decompose their dN/dS values:
 
 ```
 perl decomposition_code_local.pl test_data_decomposition.txt -clean > test_data_output.out
